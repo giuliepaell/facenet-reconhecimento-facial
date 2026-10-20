@@ -218,3 +218,18 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+# Fotografias e dados biométricos privados
+IA_Fotos_Privadas/
+fotos_privadas/
+dados_privados/
+embeddings/
+*.npy
+*.npz
+
+# Modelos e checkpoints
+*.pth
+*.pt
+*.ckpt
+
+# Ambiente virtual
+.venv/
