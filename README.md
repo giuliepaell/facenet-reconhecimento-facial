@@ -103,3 +103,22 @@ utilizado, mas não garantem compatibilidade em outros ambientes.
 O arquivo requirements.txt registra parte das dependências.
 A instalação do PyTorch e do Torchvision deve considerar
 a compatibilidade com o ambiente de execução.
+## Configuração dos caminhos
+
+O notebook utiliza o Google Drive para armazenar os resultados.
+
+Para executar no Google Colab, é necessário autorizar
+a montagem do próprio Google Drive.
+
+O caminho utilizado originalmente foi:
+
+/content/drive/MyDrive/IA_Reconhecimento_Facial/resultados
+
+O usuário pode alterar a variável `pasta_resultados`
+para escolher outro local de armazenamento.
+
+O código cria automaticamente a pasta de resultados,
+caso ela ainda não exista.
+
+Outros caminhos de entrada e saída presentes no
+notebook também devem ser conferidos antes da execução.
