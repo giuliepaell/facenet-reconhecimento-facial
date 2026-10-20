@@ -80,3 +80,26 @@ O projeto foi desenvolvido principalmente no Google Colab, utilizando Python e a
 - Os resultados podem variar conforme a configuração, a aleatoriedade e as versões das dependências.
 - As fotografias do experimento privado não são disponibilizadas no repositório para preservar a privacidade.
 - A execução completa dos experimentos com CelebA pode exigir recursos computacionais adicionais.
+## Ambiente utilizado nos experimentos
+
+Os experimentos foram executados no Google Colab, com as seguintes versões:
+
+- Python: versão do ambiente Colab
+- PyTorch: 2.11.0+cu130
+- Torchvision: 0.26.0+cu130
+- facenet-pytorch: 2.6.0
+- Scikit-learn: 1.6.1
+- NumPy: 2.1.3
+- Pandas: 2.2.3
+
+O notebook utiliza o comando:
+
+    %pip install --no-deps facenet-pytorch
+
+A opção `--no-deps` evita a instalação automática das
+dependências. As versões registradas descrevem o ambiente
+utilizado, mas não garantem compatibilidade em outros ambientes.
+
+O arquivo requirements.txt registra parte das dependências.
+A instalação do PyTorch e do Torchvision deve considerar
+a compatibilidade com o ambiente de execução.
