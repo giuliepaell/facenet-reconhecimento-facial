@@ -139,3 +139,16 @@ os caminhos no notebook.
 
 Os arquivos originais do dataset não estão
 incluídos neste repositório.
+## Conclusão e escolha do modelo
+
+Foram realizados experimentos de verificação facial utilizando FaceNet, com avaliação no LFW e fine-tuning no CelebA.
+
+**Experimento LFW:** a similaridade do cosseno alcançou acurácia média de 98,43%, enquanto a distância euclidiana alcançou 98,30%, utilizando validação cruzada em 10 folds.
+
+**Experimento CelebA:** o FaceNet original obteve AUC de teste de aproximadamente 0,99475. O modelo após a primeira época de fine-tuning obteve AUC de teste de aproximadamente 0,99507.
+
+A diferença de desempenho no CelebA foi pequena, não sendo suficiente, isoladamente, para demonstrar uma melhoria consistente e generalizável com o treinamento adicional.
+
+**Escolha:** o FaceNet pré-treinado é a opção preferencial para continuidade do projeto, pois apresentou desempenho elevado sem exigir fine-tuning adicional. A escolha considera o desempenho observado, a simplicidade e o custo de treinamento.
+
+**Limitações:** os resultados dependem dos datasets e protocolos utilizados. O experimento privado foi exploratório, com seis fotografias de uma única pessoa, não permitindo calcular acurácia de reconhecimento ou avaliar generalização para outras identidades.
