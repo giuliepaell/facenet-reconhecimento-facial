@@ -1,0 +1,3 @@
+Modelo,AUC_validacao,AUC_teste
+FaceNet original,0.9958083079599825,0.9947481409567875
+FaceNet fine-tuning - época 1,0.9959172248803828,0.9950695488721804
