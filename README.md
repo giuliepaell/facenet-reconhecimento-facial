@@ -122,3 +122,20 @@ caso ela ainda não exista.
 
 Outros caminhos de entrada e saída presentes no
 notebook também devem ser conferidos antes da execução.
+## Dataset CelebA
+
+O experimento CelebA utiliza o arquivo
+`identity_CelebA.txt`, que associa as imagens
+às respectivas identidades.
+
+O caminho utilizado no desenvolvimento foi:
+
+`/content/drive/MyDrive/IA_Reconhecimento_Facial/dados_treinamento/identity_CelebA.txt`
+
+Para reproduzir o experimento, é necessário
+obter o dataset CelebA por uma fonte autorizada,
+respeitando suas condições de uso, e ajustar
+os caminhos no notebook.
+
+Os arquivos originais do dataset não estão
+incluídos neste repositório.
