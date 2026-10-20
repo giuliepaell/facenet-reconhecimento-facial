@@ -55,3 +55,28 @@ O processamento do dataset privado foi realizado localmente. Arquivos biométric
 ## Documentação
 
 Os códigos, as configurações experimentais e as análises são apresentados no notebook do projeto.
+## Como executar o projeto
+
+O projeto foi desenvolvido principalmente no Google Colab, utilizando Python e a biblioteca `facenet-pytorch`.
+
+### Requisitos
+
+- Python 3
+- Google Colab (recomendado)
+- Bibliotecas utilizadas no notebook, incluindo `torch`, `torchvision`, `facenet-pytorch`, `numpy`, `pandas`, `scikit-learn` e `matplotlib`
+- Acesso aos datasets públicos LFW e CelebA, conforme as condições de uso de cada conjunto de dados
+
+### Execução
+
+1. Abra o arquivo `FaceNet_Reconhecimento_Facial_GitHub.ipynb` no Google Colab.
+2. Configure o ambiente de execução e instale as dependências indicadas nas células do notebook.
+3. Disponibilize os datasets públicos nos caminhos esperados pelo código.
+4. Execute as células na ordem apresentada, ajustando os caminhos do Google Drive quando necessário.
+5. Consulte os arquivos CSV na pasta `resultados/` para visualizar os resultados registrados dos experimentos.
+
+### Observações
+
+- O notebook pode exigir ajustes de caminhos e versões de bibliotecas conforme o ambiente utilizado.
+- Os resultados podem variar conforme a configuração, a aleatoriedade e as versões das dependências.
+- As fotografias do experimento privado não são disponibilizadas no repositório para preservar a privacidade.
+- A execução completa dos experimentos com CelebA pode exigir recursos computacionais adicionais.
