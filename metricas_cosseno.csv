@@ -1,0 +1,7 @@
+Metrica,Media (%),Desvio padrao (%)
+Acuracia,98.43,0.69
+Precisao,98.79,0.68
+Recall,98.07,1.16
+F1,98.43,0.7
+FAR,1.2,0.69
+FRR,1.93,1.16
