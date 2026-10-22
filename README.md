@@ -156,4 +156,8 @@ A diferença de desempenho no CelebA foi pequena, não sendo suficiente, isolada
 
 A apresentação da Parte 1 do projeto aborda o problema de reconhecimento facial, os datasets utilizados, a arquitetura FaceNet, a metodologia, os experimentos, o treinamento, os resultados e a justificativa da escolha do modelo.
 
-**Vídeo da apresentação:** [Assistir à apresentação]([https://youtu.be/VcDzbpkFQBs?si=5dOM_Ga8IBibm3Je])
+**Vídeo da apresentação:** [Assistir à apresentação](## Apresentação em vídeo
+
+A apresentação da Parte 1 do projeto aborda o problema de reconhecimento facial, os datasets utilizados, a arquitetura FaceNet, a metodologia, os experimentos, o treinamento, os resultados e a justificativa da escolha do modelo.
+
+**Vídeo da apresentação:** [Assistir à apresentação](https://youtu.be/VcDzbpkFQBs?si=5dOM_Ga8IBibm3Je)
