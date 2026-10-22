@@ -66,7 +66,7 @@ O experimento privado é exploratório e não constitui uma avaliação de acur�
 
 As fotografias pessoais e os embeddings faciais não são disponibilizados neste repositório.
 
-O processamento do dataset privado foi realizado localmente. Arquivos biométricos e checkpoints não devem ser publicados.
+O processamento do dataset privado foi realizado localmente. 
 
 ## Documentação
 
@@ -130,9 +130,7 @@ O notebook utiliza o comando:
     %pip install --no-deps facenet-pytorch
 
 A opção `--no-deps` evita a instalação automática das
-dependências. As versões registradas descrevem o ambiente
-utilizado, mas não garantem compatibilidade em outros ambientes.
-
+dependências. 
 O arquivo requirements.txt registra parte das dependências.
 A instalação do PyTorch e do Torchvision deve considerar
 a compatibilidade com o ambiente de execução.
@@ -229,7 +227,7 @@ incluídos neste repositório.
 
 Foi escolhido o FaceNet pré-treinado em VGGFace2 para a continuidade do projeto, considerando o desempenho elevado, a menor complexidade e a ausência de evidências suficientes de melhoria consistente com o fine-tuning realizado.
 
-Os resultados dos experimentos com LFW e CelebA não são diretamente comparáveis, pois utilizam métricas e protocolos de avaliação diferentes.
+
 ## Conclusão e escolha do modelo
 
 Foram realizados experimentos de verificação facial utilizando FaceNet, com avaliação no LFW e fine-tuning no CelebA.
@@ -246,8 +244,6 @@ A diferença de desempenho no CelebA foi pequena, não sendo suficiente, isolada
 ## Apresentação em vídeo
 
 A apresentação da Parte 1 do projeto aborda o problema de reconhecimento facial, os datasets utilizados, a arquitetura FaceNet, a metodologia, os experimentos, o treinamento, os resultados e a justificativa da escolha do modelo.
-
-**Vídeo da apresentação:** [Assistir à apresentação](## Apresentação em vídeo
 
 A apresentação da Parte 1 do projeto aborda o problema de reconhecimento facial, os datasets utilizados, a arquitetura FaceNet, a metodologia, os experimentos, o treinamento, os resultados e a justificativa da escolha do modelo.
 
