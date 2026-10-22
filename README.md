@@ -152,3 +152,8 @@ A diferença de desempenho no CelebA foi pequena, não sendo suficiente, isolada
 **Escolha:** o FaceNet pré-treinado é a opção preferencial para continuidade do projeto, pois apresentou desempenho elevado sem exigir fine-tuning adicional. A escolha considera o desempenho observado, a simplicidade e o custo de treinamento.
 
 **Limitações:** os resultados dependem dos datasets e protocolos utilizados. O experimento privado foi exploratório, com seis fotografias de uma única pessoa, não permitindo calcular acurácia de reconhecimento ou avaliar generalização para outras identidades.
+## Apresentação em vídeo
+
+A apresentação da Parte 1 do projeto aborda o problema de reconhecimento facial, os datasets utilizados, a arquitetura FaceNet, a metodologia, os experimentos, o treinamento, os resultados e a justificativa da escolha do modelo.
+
+**Vídeo da apresentação:** [Assistir à apresentação]([https://youtu.be/VcDzbpkFQBs?si=5dOM_Ga8IBibm3Je])
