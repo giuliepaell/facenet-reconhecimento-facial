@@ -17,7 +17,23 @@ Avaliar o desempenho do FaceNet em diferentes conjuntos de imagens, utilizando m
 - Google Colab
 - MTCNN
 - FaceNet (InceptionResnetV1)
+## Datasets públicos utilizados
 
+### LFW — Labeled Faces in the Wild
+
+- **Fonte oficial:** https://vis-www.cs.umass.edu/lfw/
+- **Finalidade:** Dataset acadêmico utilizado para pesquisa e avaliação de algoritmos de reconhecimento e verificação facial em imagens capturadas em condições não controladas.
+- **Termos de utilização:** O dataset é disponibilizado para fins de pesquisa. Sua utilização deve respeitar as condições estabelecidas pelos responsáveis e os direitos relacionados às fotografias.
+- **Utilização no projeto:** Foram avaliados 6.000 pares de imagens utilizando o FaceNet pré-treinado. Foram comparadas a similaridade de cosseno e a distância euclidiana, com validação cruzada em 10 folds.
+
+### CelebA — CelebFaces Attributes Dataset
+
+- **Fonte oficial:** https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html
+- **Finalidade:** Dataset acadêmico de imagens faciais com informações de identidade e atributos, utilizado em pesquisas de visão computacional.
+- **Termos de utilização:** O CelebA possui restrições de uso acadêmico e não comercial. Sua redistribuição é limitada pelas condições estabelecidas pelos responsáveis.
+- **Utilização no projeto:** Foram utilizadas 2.000 imagens de 100 identidades, separadas em treinamento, validação e teste por identidade. O experimento comparou o FaceNet original com o modelo após fine-tuning.
+
+Os arquivos originais dos datasets públicos não são disponibilizados neste repositório. Para reproduzir os experimentos, é necessário obtê-los nas fontes oficiais e respeitar seus respectivos termos de utilização.
 ## Experimentos realizados
 
 ### 1. LFW — Labeled Faces in the Wild
