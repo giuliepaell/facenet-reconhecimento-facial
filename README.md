@@ -89,6 +89,23 @@ O projeto foi desenvolvido principalmente no Google Colab, utilizando Python e a
 3. Disponibilize os datasets públicos nos caminhos esperados pelo código.
 4. Execute as células na ordem apresentada, ajustando os caminhos do Google Drive quando necessário.
 5. Consulte os arquivos CSV na pasta `resultados/` para visualizar os resultados registrados dos experimentos.
+6. ## Reprodutibilidade e arquivos externos
+
+Os experimentos foram desenvolvidos no Google Colab e utilizam arquivos armazenados no Google Drive.
+
+Para reproduzi-los, é necessário:
+
+1. Instalar as dependências indicadas no projeto.
+2. Obter os datasets LFW e CelebA de fontes autorizadas.
+3. Organizar os arquivos do CelebA, incluindo `identity_CelebA.txt`, `list_eval_partition.txt` e `img_align_celeba.zip`.
+4. Montar o Google Drive no Colab e ajustar os caminhos de entrada e saída no notebook.
+5. Executar as etapas de preparação, avaliação e treinamento na ordem apresentada.
+
+Algumas células de análise carregam resultados e checkpoints gerados em etapas anteriores. Portanto, devem ser executadas somente depois da criação dos arquivos correspondentes.
+
+Os arquivos CSV disponíveis na pasta `resultados/` registram resultados dos experimentos. Algumas tabelas foram consolidadas a partir de valores previamente obtidos, e não são recalculadas automaticamente em todas as células.
+
+Os dados biométricos privados não são fornecidos para reprodução pública. O experimento privado deve ser realizado somente com fotografias obtidas com consentimento, armazenadas em ambiente protegido.
 
 ### Observações
 
@@ -253,3 +270,4 @@ No CelebA, o fine-tuning após a primeira época apresentou uma pequena melhoria
 Os resultados de LFW e CelebA não devem ser comparados diretamente, pois foram obtidos utilizando métricas e protocolos experimentais diferentes.
 
 Considerando desempenho, simplicidade e custo computacional, foi selecionado o FaceNet pré-treinado para a continuidade do projeto.
+
