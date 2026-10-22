@@ -177,3 +177,21 @@ A apresentação da Parte 1 do projeto aborda o problema de reconhecimento facia
 A apresentação da Parte 1 do projeto aborda o problema de reconhecimento facial, os datasets utilizados, a arquitetura FaceNet, a metodologia, os experimentos, o treinamento, os resultados e a justificativa da escolha do modelo.
 
 **Vídeo da apresentação:** [Assistir à apresentação](https://youtu.be/VcDzbpkFQBs?si=5dOM_Ga8IBibm3Je)
+## Comparação dos experimentos
+
+| Experimento | Modelo | Estratégia | Dataset | Métrica | Resultado |
+|---|---|---|---|---|---|
+| E01 | FaceNet pré-treinado | Similaridade de cosseno | LFW | Accuracy | 98,43% |
+| E02 | FaceNet pré-treinado | Distância euclidiana | LFW | Accuracy | 98,30% |
+| E03 | FaceNet pré-treinado | Sem fine-tuning | CelebA | ROC-AUC | 0,994748 |
+| E04 | FaceNet com fine-tuning | Após 1 época | CelebA | ROC-AUC | 0,995070 |
+
+### Análise comparativa
+
+No LFW, a similaridade de cosseno apresentou acurácia média ligeiramente superior à distância euclidiana.
+
+No CelebA, o fine-tuning após a primeira época apresentou uma pequena melhoria na AUC de teste em relação ao modelo original. Entretanto, a diferença foi reduzida e não demonstra, isoladamente, uma melhoria consistente.
+
+Os resultados de LFW e CelebA não devem ser comparados diretamente, pois foram obtidos utilizando métricas e protocolos experimentais diferentes.
+
+Considerando desempenho, simplicidade e custo computacional, foi selecionado o FaceNet pré-treinado para a continuidade do projeto.
