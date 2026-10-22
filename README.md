@@ -4,6 +4,64 @@
 ## Trabalho 1 — Experimentos de Reconhecimento Facial
 
 Projeto acadêmico desenvolvido para investigar o desempenho do modelo FaceNet em tarefas de verificação facial.
+## Hipóteses e configurações experimentais
+
+### Experimento 1 — FaceNet no LFW
+
+**Hipótese:** A similaridade de cosseno pode apresentar desempenho superior à distância euclidiana na verificação facial utilizando embeddings do FaceNet.
+
+- **Dataset:** LFW, com 6.000 pares de imagens.
+- **Modelo:** FaceNet (InceptionResnetV1), pré-treinado em VGGFace2.
+- **Estratégia:** Avaliação sem treinamento adicional.
+- **Configuração:** Validação cruzada em 10 folds, com 600 pares por fold.
+- **Seleção de threshold:** Em cada fold, o limiar foi escolhido nos outros nove folds, sem utilizar os pares reservados para teste.
+- **Limiar de cosseno:** Busca entre 0 e 1, com incremento de 0,01.
+- **Limiar euclidiano:** Busca entre 0 e 2, com incremento de 0,01.
+- **Métrica principal:** Acurácia média nos folds.
+
+**Resultados:**
+- Similaridade de cosseno: 98,43% ± 0,69%.
+- Distância euclidiana: 98,30% ± 0,74%.
+
+**Interpretação:** A similaridade de cosseno apresentou vantagem de 0,13 ponto percentual. A diferença foi pequena, indicando desempenho semelhante entre os dois métodos.
+
+### Experimento 2 — Fine-tuning no CelebA
+
+**Hipótese:** O ajuste parcial das últimas camadas do FaceNet pode melhorar a capacidade de distinguir identidades em comparação ao modelo original.
+
+**Dataset e divisão:**
+- 2.000 imagens de 100 identidades.
+- Treinamento: 1.500 imagens de 75 identidades.
+- Validação: 220 imagens de 11 identidades.
+- Teste: 280 imagens de 14 identidades.
+- Separação sem compartilhamento de identidades entre os conjuntos.
+
+**Arquitetura e treinamento:**
+- Modelo: InceptionResnetV1, pré-treinado em VGGFace2.
+- Embeddings de 512 dimensões.
+- Fine-tuning parcial das camadas `block8`, `last_linear` e `last_bn`.
+- Classificador linear de 512 entradas e 75 classes.
+- Função de perda: Cross-Entropy.
+- Otimizador: Adam.
+- Learning rate do FaceNet: 0,00001.
+- Learning rate do classificador: 0,001.
+- Batch size: 16.
+- Número de épocas: 2.
+- Seleção reproduzível do subconjunto de imagens com `random_state=42`.
+
+**Métrica principal:** ROC-AUC na verificação de pares faciais.
+
+**Resultados no teste:**
+- FaceNet original: AUC 0,994748.
+- FaceNet com fine-tuning após a primeira época: AUC 0,995070.
+
+**Interpretação:** O fine-tuning produziu uma melhoria numérica de aproximadamente 0,032 ponto percentual na AUC de teste. Entretanto, a segunda época apresentou piora na AUC de validação. A melhoria observada foi muito pequena para justificar, por si só, a adoção do modelo ajustado.
+
+### Decisão experimental
+
+Foi escolhido o FaceNet pré-treinado em VGGFace2 para a continuidade do projeto, considerando o desempenho elevado, a menor complexidade e a ausência de evidências suficientes de melhoria consistente com o fine-tuning realizado.
+
+Os resultados dos experimentos com LFW e CelebA não são diretamente comparáveis, pois utilizam métricas e protocolos de avaliação diferentes.
 
 ## Objetivo
 
